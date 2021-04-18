@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 //set up express
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
 //handle data parsing 
 app.use(express.urlencoded({ extended: true }));
@@ -12,15 +12,15 @@ app.use(express.static("public"));
 
 //route to html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
 //api routes 
 app.get('/api/notes', (req, res) => {
-    fs.readFile(path.join(__dirname, './db/db.json'), 'utf8', (error, data) => {
+    fs.readFile(path.join(__dirname, '/db/db.json'), 'utf8', (error, data) => {
         if (error) {
             throw error;
         }
@@ -32,7 +32,7 @@ app.get('/api/notes', (req, res) => {
     })
 });
 app.post('/api/notes', (req, res) => {
-    fs.readFile(path.join(__dirname, './db/db.json'), 'utf8', (error, data) => {
+    fs.readFile(path.join(__dirname, '/db/db.json'), 'utf8', (error, data) => {
         if (error) {
             throw error;
         }
@@ -44,7 +44,7 @@ app.post('/api/notes', (req, res) => {
         //add to body
         parseData.push(req.body);
         //write to db.json and send response as string
-        fs.writeFile(path.join(__dirname, './db/db.json'), JSON.stringify(parseData), (error) => {
+        fs.writeFile(path.join(__dirname, '/db/db.json'), JSON.stringify(parseData), (error) => {
             if (error) {
                 throw error;
             }
@@ -56,7 +56,7 @@ app.post('/api/notes', (req, res) => {
 //delete request to db.json using route
 app.delete('/api/notes:id', (req, res) => {
     console.log(req.params)
-    fs.readFile(path.join(__dirname, './db/db.json'), 'utf8', (error, data) => {
+    fs.readFile(path.join(__dirname, '/db/db.json'), 'utf8', (error, data) => {
         if (error) {
             throw error;
         }
