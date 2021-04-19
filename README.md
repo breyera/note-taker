@@ -4,7 +4,7 @@
 
 ## Description
 
-A Heroku deployed app that uses express to create a server. Write and save notes for yourself. Delete them if no longer needed. [Watch the video]() to see how to use, follow the steps, or go to [the deployed app](https://safe-escarpment-93726.herokuapp.com/).
+A Heroku deployed app that uses express to create a server. Write and save notes for yourself. Delete them if no longer needed. [Watch the video](https://drive.google.com/file/d/1YUu-qOd_Nsqo6OrhKg1T-ksPCCrAsmSD/view?usp=sharing) to see how to use, follow the steps, or go to [the deployed app](https://safe-escarpment-93726.herokuapp.com/).
 
 ## How To
 
@@ -21,7 +21,7 @@ A Heroku deployed app that uses express to create a server. Write and save notes
 
 ### Usage Video
 
-[video of how to use note-taker]()
+[video of how to use note-taker](https://drive.google.com/file/d/1YUu-qOd_Nsqo6OrhKg1T-ksPCCrAsmSD/view?usp=sharing)
 
 ### License
 
@@ -32,4 +32,4 @@ MIT License
 
 ![image of home page](./public/assets/images/home-page.PNG)
 ![image of notes page](./public/assets/images/notes-page.PNG)
-![gif of adding and deleting notes]()
+![gif of adding and deleting notes](./public/assets/images/note-taker-gif.gif)
